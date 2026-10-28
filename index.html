@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDIT: browser tab title and Google search description -->
+  <title>IT'sOnboarding | Microsoft 365 Onboarding Guide for Small Businesses</title>
+  <meta name="description" content="A plain-English Microsoft 365 onboarding guide for small businesses. Teach new staff Outlook, Teams, OneDrive, SharePoint and security basics. Instant PDF download.">
+  <meta property="og:title" content="IT'sOnboarding | Microsoft 365 Onboarding Guide">
+  <meta property="og:description" content="Help new staff get Microsoft 365 right from day one. Instant PDF download.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0F5F59">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230F5F59'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='25' cy='7' r='3' fill='%23F5A524'/%3E%3C/svg%3E">
+
+  <!--
+  ==================================================================
+    EDIT YOUR WEBSITE TEXT HERE
+  ==================================================================
+    All the words, prices and links on the page live in SITE below.
+    - Only change the text between the "quote marks".
+    - If your text needs an apostrophe, that's fine: "It's" works.
+    - If your text needs a double quote, use “curly quotes” instead.
+    - Keep the commas at the end of each line.
+    - To add another card or FAQ, copy a whole { ... }, line and
+      paste it below the last one.
+  ==================================================================
+  -->
+  <script>
+  const SITE = {
+
+    // ---------- EDIT: business and product name ----------
+    brandName: "IT'sOnboarding",
+    productName: "The Microsoft 365 New Starter Guide",
+
+    // ---------- EDIT: price here ----------
+    price: "$49",
+    currency: "AUD",
+    priceNote: "One-off payment. Instant download.",
+
+    // ---------- EDIT: buy links here ----------
+    // Your Shopify product page or checkout link (used by every "Buy" button).
+    // Optional: you can ALSO paste Shopify Buy Button embed code further
+    // down the page. Search this file for "PASTE SHOPIFY".
+    shopifyLink: "#",
+    // Your PayPal payment link. Leave as "" to hide the PayPal option.
+    paypalLink: "",
+
+    // ---------- EDIT: contact email here ----------
+    contactEmail: "hello@example.com",
+
+    // ---------- EDIT: words on the product cover picture ----------
+    cover: {
+      kicker: "STAFF GUIDE",
+      titleLines: ["Microsoft 365", "New Starter", "Guide"],
+      tagline: "Plain-English basics for your team"
+    },
+
+    // ---------- EDIT: top section (hero) ----------
+    hero: {
+      eyebrow: "The Microsoft 365 onboarding guide for small businesses",
+      headline: "Help new staff get Microsoft 365 right from day one",
+      headlineHighlight: "right from day one", // must match words in the headline
+      subhead: "A plain-English guide that teaches new starters the Microsoft 365 basics, so you can stop explaining the same things to every new hire.",
+      buyLabel: "Buy now",
+      trust: [
+        "Instant download by email",
+        "Share the PDF with your team",
+        "Written for non-technical staff"
+      ]
+    },
+
+    // ---------- EDIT: the problem ----------
+    // icon options: folder, shield, clock, mail, chat, cloud, share, alert
+    problem: {
+      heading: "Sound familiar?",
+      intro: "New staff are keen, but Microsoft 365 isn't always obvious. Without a little guidance, small habits turn into big headaches.",
+      points: [
+        { icon: "folder", title: "Files end up everywhere", text: "Saved to desktops, personal accounts and email attachments, so no one can find the latest version." },
+        { icon: "shield", title: "Security gets skipped", text: "Weak passwords, ignored sign-in prompts and one wrong click on a dodgy email." },
+        { icon: "clock",  title: "You become the help desk", text: "Without an IT team, you end up answering the same questions instead of running your business." }
+      ],
+      solution: "IT'sOnboarding gives every new starter the same clear foundation, without you having to run the training yourself."
+    },
+
+    // ---------- EDIT: what's inside (topic cards) ----------
+    inside: {
+      heading: "What's inside the guide",
+      intro: "Short, practical chapters covering what new staff actually use every day.",
+      topics: [
+        { icon: "mail",   title: "Outlook email and calendar", text: "Sending, organising and searching email, plus booking meetings and sharing calendars." },
+        { icon: "chat",   title: "Teams chat and meetings", text: "When to chat and when to email, and how to join and run meetings with confidence." },
+        { icon: "cloud",  title: "OneDrive and SharePoint", text: "Where work files belong, how they sync, and how to find the right version." },
+        { icon: "share",  title: "Sharing files the right way", text: "Share links instead of attachments and control who can view or edit." },
+        { icon: "shield", title: "Multi-factor authentication (MFA)", text: "Why MFA matters, how to set it up and what to do about an unexpected sign-in prompt." },
+        { icon: "alert",  title: "Spotting phishing and scams", text: "The warning signs of a suspicious email and exactly what to do if something looks off." }
+      ]
+    },
+
+    // ---------- EDIT: who it's for ----------
+    audience: {
+      heading: "Who it's for",
+      intro: "Made for small businesses that don't have a full IT department.",
+      people: [
+        { title: "Business owners", text: "You want new staff productive quickly without becoming the trainer." },
+        { title: "Office and practice managers", text: "You look after onboarding and want a consistent starting point for everyone." },
+        { title: "Solo or small IT teams", text: "You'd rather fix real problems than explain how to share a file again." },
+        { title: "New starters", text: "Staff with little or no Microsoft 365 experience who want a friendly place to begin." }
+      ],
+      note: "Good to know: this is a guide for your staff, not a setup service. It doesn't configure your Microsoft 365 account for you."
+    },
+
+    // ---------- EDIT: how you get it ----------
+    delivery: {
+      heading: "How you get it",
+      intro: "It's a digital product, so there's no waiting and no shipping.",
+      steps: [
+        { title: "Buy securely", text: "Check out in about a minute with card or PayPal." },
+        { title: "Check your inbox", text: "Your download link arrives by email straight after purchase." },
+        { title: "Share with your team", text: "Save the PDF and send it to staff whenever someone new starts." }
+      ]
+    },
+
+    // ---------- EDIT: FAQ questions and answers ----------
+    faq: {
+      heading: "Questions, answered",
+      items: [
+        { q: "Is this a service or a course?", a: "Neither. It's a downloadable guide (PDF). There are no bookings, calls or setup work. You buy it, download it and share it with your staff." },
+        { q: "What experience does it assume?", a: "None. It's written in plain English for people who are new to Microsoft 365, or who have only used it a little." },
+        // EDIT: make sure this answer matches your licence / Terms
+        { q: "Can I share it with my team?", a: "Yes. You can share the PDF with staff inside your own business. Please don't resell it or publish it publicly." },
+        { q: "How will I receive it?", a: "Straight after purchase you'll get an email with your download link. If it hasn't arrived within a few minutes, check your junk folder or email us." },
+        { q: "What if it's not right for my business?", a: "Please read our Refund Policy (linked at the bottom of this page) before you buy. If you have a question first, email us and we'll be happy to help." }
+      ]
+    },
+
+    // ---------- EDIT: final call to action ----------
+    finalCta: {
+      heading: "Give your next new starter a head start",
+      text: "One guide. Every new hire. Less time repeating yourself.",
+      buyLabel: "Get the guide"
+    },
+
+    // ---------- EDIT: footer ----------
+    footer: {
+      tagline: "Microsoft 365 onboarding guides for small businesses.",
+      termsLink: "#terms",     // EDIT: link to your Terms page
+      privacyLink: "#privacy", // EDIT: link to your Privacy Policy
+      refundLink: "#refunds",  // EDIT: link to your Refund Policy
+      disclaimer: "Microsoft 365, Outlook, Teams, OneDrive and SharePoint are trademarks of Microsoft Corporation. IT'sOnboarding is an independent business and is not affiliated with or endorsed by Microsoft."
+    }
+  };
+  </script>
+  <!-- ==================== END OF EDITABLE TEXT ==================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- EDIT: brand colours ---------- */
+    :root {
+      --ink: #14213D;        /* main text, navy */
+      --ink-soft: #4A5568;   /* secondary text */
+      --teal: #0F766E;       /* brand colour */
+      --teal-dark: #0F5F59;
+      --teal-tint: #E3F2EF;
+      --amber: #F5A524;      /* buy buttons and highlights */
+      --amber-dark: #E08E0B;
+      --amber-tint: #FEF3D7;
+      --coral: #D9573B;      /* "problem" accents */
+      --coral-tint: #FDE8E2;
+      --cream: #FBF8F3;      /* page background */
+      --white: #FFFFFF;
+      --line: #E7E1D6;
+
+      --font-head: "Fraunces", Georgia, serif;
+      --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --radius: 18px;
+      --shadow: 0 1px 2px rgba(20,33,61,.06), 0 8px 24px rgba(20,33,61,.07);
+      --wrap: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+    }
+    img, svg { max-width: 100%; display: block; }
+    a { color: var(--teal); }
+    h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0 0 .5em; letter-spacing: -.01em; }
+    h1 { font-size: clamp(2.1rem, 7vw, 3.4rem); }
+    h2 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+    h3 { font-size: 1.2rem; font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
+    p { margin: 0 0 1em; }
+
+    .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+    @media (min-width: 720px) { .wrap { padding: 0 28px; } }
+
+    .skip {
+      position: absolute; left: 12px; top: -60px; z-index: 100;
+      background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 8px;
+    }
+    .skip:focus { top: 12px; }
+    :focus-visible { outline: 3px solid var(--amber-dark); outline-offset: 3px; border-radius: 6px; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+      min-height: 52px; padding: 14px 28px;
+      border-radius: 999px; border: 0;
+      font: 700 1.05rem/1 var(--font-body);
+      text-decoration: none; cursor: pointer;
+      transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+    }
+    .btn-buy { background: var(--amber); color: var(--ink); box-shadow: 0 6px 18px rgba(245,165,36,.35); }
+    .btn-buy:hover { background: var(--amber-dark); transform: translateY(-1px); }
+    .btn-buy svg { width: 20px; height: 20px; }
+    .btn-small { min-height: 40px; padding: 10px 18px; font-size: .95rem; box-shadow: none; }
+    .btn-block { width: 100%; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(251,248,243,.92);
+      backdrop-filter: saturate(1.4) blur(8px);
+      -webkit-backdrop-filter: saturate(1.4) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .logo svg { width: 34px; height: 34px; flex: none; }
+    .wordmark { font-family: var(--font-head); font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+    .wordmark span { color: var(--teal); }
+    .nav { display: flex; align-items: center; gap: 22px; }
+    .nav a.nav-link { display: none; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .nav a.nav-link:hover { color: var(--teal); }
+    @media (min-width: 720px) { .nav a.nav-link { display: inline; } }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 40px 0 56px; overflow: hidden; }
+    .hero-grid {
+      display: grid; gap: 28px;
+      grid-template-areas: "copy" "cover" "buy";
+    }
+    .hero-copy { grid-area: copy; }
+    .hero-cover { grid-area: cover; }
+    .hero-buy { grid-area: buy; }
+    @media (min-width: 960px) {
+      .hero { padding: 72px 0 88px; }
+      .hero-grid {
+        grid-template-columns: 1.1fr .9fr; column-gap: 64px; row-gap: 32px;
+        grid-template-areas: "copy cover" "buy cover";
+        align-items: start;
+      }
+      .hero-cover { align-self: center; }
+    }
+    .eyebrow {
+      display: inline-block; margin-bottom: 18px;
+      padding: 6px 14px; border-radius: 999px;
+      background: var(--teal-tint); color: var(--teal-dark);
+      font-weight: 700; font-size: .85rem;
+    }
+    .highlight {
+      background-image: linear-gradient(transparent 62%, var(--amber-tint) 62%, var(--amber-tint) 92%, transparent 92%);
+      color: var(--teal-dark);
+    }
+    .lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 36em; }
+
+    .price-card {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 22px; max-width: 460px;
+    }
+    .price-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+    .price { font-family: var(--font-head); font-weight: 700; font-size: 2.6rem; line-height: 1; }
+    .currency { font-weight: 700; color: var(--ink-soft); }
+    .price-note { color: var(--ink-soft); font-size: .95rem; margin-bottom: 16px; }
+    .alt-pay { margin: 12px 0 0; text-align: center; font-size: .95rem; color: var(--ink-soft); }
+    .alt-pay a { font-weight: 700; }
+    .trust { list-style: none; margin: 18px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; gap: 8px; font-size: .95rem; }
+    .trust li { display: flex; gap: 10px; align-items: center; }
+    .trust svg { width: 20px; height: 20px; flex: none; color: var(--teal); }
+
+    .cover-stage { position: relative; max-width: 400px; margin: 0 auto; }
+    .cover-stage::before {
+      content: ""; position: absolute; inset: 8% -6% -4% 6%;
+      background: radial-gradient(circle at 60% 40%, var(--amber-tint), transparent 68%);
+      z-index: -1;
+    }
+    .cover-svg {
+      width: 100%; height: auto;
+      filter: drop-shadow(0 24px 30px rgba(20,33,61,.22));
+      transform: rotate(-2.5deg);
+    }
+    .cover-title { font-family: var(--font-head); font-weight: 700; }
+    .cover-body { font-family: var(--font-body); }
+
+    /* ---------- Sections ---------- */
+    .section { padding: 64px 0; }
+    @media (min-width: 960px) { .section { padding: 96px 0; } }
+    .section-white { background: var(--white); }
+    .section-head { max-width: 680px; margin-bottom: 36px; }
+    .section-head p { color: var(--ink-soft); font-size: 1.1rem; }
+    .center { text-align: center; margin-left: auto; margin-right: auto; }
+
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 720px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .grid-3-lg { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 24px;
+    }
+    .section-white .card { background: var(--cream); }
+    .card p { margin: 0; color: var(--ink-soft); }
+    .icon-badge {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: grid; place-items: center; margin-bottom: 16px;
+      background: var(--teal-tint); color: var(--teal-dark);
+    }
+    .icon-badge svg { width: 24px; height: 24px; }
+    .icon-badge.is-problem { background: var(--coral-tint); color: var(--coral); }
+
+    .solution {
+      margin-top: 28px; padding: 22px 24px;
+      border-radius: var(--radius);
+      background: var(--teal-dark); color: #fff;
+      font-weight: 600; font-size: 1.1rem;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .solution svg { width: 26px; height: 26px; flex: none; color: var(--amber); margin-top: 2px; }
+
+    .people { list-style: none; margin: 0; padding: 0; }
+    .people li { display: flex; gap: 14px; }
+    .people .tick {
+      flex: none; width: 30px; height: 30px; border-radius: 50%;
+      background: var(--amber-tint); color: var(--ink);
+      display: grid; place-items: center; margin-top: 2px;
+    }
+    .people .tick svg { width: 16px; height: 16px; }
+    .people h3 { margin-bottom: .2em; }
+    .people p { margin: 0; color: var(--ink-soft); }
+    .note {
+      margin-top: 28px; padding: 16px 20px;
+      border-left: 4px solid var(--amber); border-radius: 0 12px 12px 0;
+      background: var(--amber-tint); color: var(--ink);
+    }
+
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+    .steps li { position: relative; counter-increment: step; padding-top: 64px; }
+    .steps li::before {
+      content: counter(step);
+      position: absolute; top: 0; left: 24px;
+      width: 46px; height: 46px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--teal); color: #fff;
+      font: 700 1.25rem/1 var(--font-head);
+      box-shadow: 0 0 0 6px var(--cream);
+    }
+    .section-white .steps li::before { box-shadow: 0 0 0 6px var(--white); }
+    .steps .card { height: 100%; padding-top: 34px; margin-top: -40px; }
+
+    /* ---------- FAQ ---------- */
+    .faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq details {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: 14px; overflow: hidden;
+    }
+    .faq summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 18px 20px; font-weight: 700; font-size: 1.05rem;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: ""; flex: none; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--teal-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F5F59' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;
+      transition: transform .2s ease;
+    }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { margin: 0; padding: 0 20px 20px; color: var(--ink-soft); }
+
+    /* ---------- Final CTA ---------- */
+    .final {
+      background: var(--teal-dark); color: #fff;
+      padding: 64px 0; text-align: center;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.07) 0 120px, transparent 121px),
+        radial-gradient(circle at 90% 90%, rgba(245,165,36,.16) 0 160px, transparent 161px);
+    }
+    @media (min-width: 960px) { .final { padding: 96px 0; } }
+    .final h2 { color: #fff; max-width: 22em; margin-left: auto; margin-right: auto; }
+    .final p { color: #D7ECE8; font-size: 1.15rem; }
+    .final .price { color: #fff; }
+    .final .currency { color: #D7ECE8; }
+    .final .price-row { justify-content: center; margin: 8px 0 22px; }
+    .final .buy-zone { max-width: 360px; margin: 0 auto; }
+    .final .alt-pay { color: #D7ECE8; }
+    .final .alt-pay a { color: #fff; }
+
+    /* ---------- Footer ---------- */
+    .site-footer { background: var(--ink); color: #C9D1E0; padding: 48px 0 32px; font-size: .95rem; }
+    .site-footer a { color: #fff; }
+    .footer-grid { display: grid; gap: 24px; }
+    @media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr; align-items: start; } }
+    .site-footer .logo { color: #fff; }
+    .site-footer .wordmark span { color: var(--amber); }
+    .footer-tagline { margin-top: 12px; }
+    .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+    @media (min-width: 720px) { .footer-links { justify-content: flex-end; } }
+    .footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); font-size: .85rem; color: #A9B3C7; }
+    .footer-bottom p { margin: 0 0 .6em; }
+
+    .is-hidden { display: none !important; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ==================== 1. HEADER ==================== -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top" aria-label="IT'sOnboarding home">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#0F5F59"/>
+          <path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="25" cy="7" r="3" fill="#F5A524"/>
+        </svg>
+        <!-- EDIT: logo wordmark text -->
+        <span class="wordmark"><span>IT's</span>Onboarding</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="nav-link" href="#inside">What's inside</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="btn btn-buy btn-small js-buy" href="#">Buy now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== 2. HERO ==================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-text="hero.eyebrow"></p>
+          <h1 id="hero-title" class="js-headline"></h1>
+          <p class="lead" data-text="hero.subhead"></p>
+        </div>
+
+        <div class="hero-cover">
+          <div class="cover-stage">
+            <!-- Product cover mockup (drawn in code, no image file needed).
+                 To use a real image later, replace this whole <svg>...</svg> with:
+                 <img src="images/cover.png" alt="Cover of the guide" width="400" height="480"> -->
+            <svg class="cover-svg" viewBox="0 0 380 460" role="img" aria-labelledby="cover-alt">
+              <title id="cover-alt">Cover of the guide</title>
+              <defs>
+                <linearGradient id="coverGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#14213D"/>
+                  <stop offset="1" stop-color="#0F5F59"/>
+                </linearGradient>
+              </defs>
+              <!-- page edges -->
+              <rect x="30" y="26" width="310" height="414" rx="12" fill="#E3DDD0"/>
+              <rect x="22" y="18" width="310" height="414" rx="12" fill="#F3EFE7"/>
+              <!-- cover -->
+              <rect x="12" y="10" width="310" height="414" rx="12" fill="url(#coverGrad)"/>
+              <rect x="12" y="10" width="16" height="414" rx="6" fill="#000" opacity=".18"/>
+              <circle cx="300" cy="380" r="120" fill="#fff" opacity=".04"/>
+              <circle cx="300" cy="380" r="70" fill="#fff" opacity=".05"/>
+
+              <!-- brand -->
+              <rect x="50" y="40" width="24" height="24" rx="7" fill="#F5A524"/>
+              <path d="M56 52.5l3.5 3.5 7-7.5" fill="none" stroke="#14213D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="82" y="58" class="cover-body" font-size="15" font-weight="700" fill="#fff">IT's<tspan fill="#F5A524">Onboarding</tspan></text>
+
+              <!-- kicker -->
+              <rect x="50" y="90" width="104" height="26" rx="13" fill="#fff" opacity=".14"/>
+              <text x="102" y="107.5" text-anchor="middle" class="cover-body js-cover-kicker" font-size="11" font-weight="700" letter-spacing="1.6" fill="#fff"></text>
+
+              <!-- title (filled in from SITE.cover) -->
+              <text x="50" y="0" class="cover-title js-cover-title" font-size="33" fill="#fff"></text>
+              <text x="50" y="300" class="cover-body js-cover-tagline" font-size="14" fill="#fff" opacity=".82"></text>
+
+              <!-- topic tiles -->
+              <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="50" y="326" width="52" height="52" rx="13" fill="#fff" fill-opacity=".1" stroke="none"/>
+                <g transform="translate(62 338) scale(1.17)"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g>
+                <rect x="112" y="326" width="52" height="52" rx="13" fill="#fff" fill-opacity=".1" stroke="none"/>
+                <g transform="translate(124 338) scale(1.17)"><path d="M4 5h16v11H10l-6 4z"/></g>
+                <rect x="174" y="326" width="52" height="52" rx="13" fill="#fff" fill-opacity=".1" stroke="none"/>
+                <g transform="translate(186 338) scale(1.17)"><path d="M7 18h10.5a4 4 0 0 0 .4-8A6 6 0 0 0 6.3 9.6 4.2 4.2 0 0 0 7 18z"/></g>
+                <rect x="236" y="326" width="52" height="52" rx="13" fill="#F5A524" stroke="none"/>
+                <g transform="translate(248 338) scale(1.17)" stroke="#14213D"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></g>
+              </g>
+              <text x="50" y="404" class="cover-body" font-size="11" font-weight="600" letter-spacing="1" fill="#fff" opacity=".6">PLAIN ENGLISH · PRACTICAL · SECURE</text>
+
+              <!-- PDF sticker -->
+              <g transform="rotate(12 326 52)">
+                <circle cx="326" cy="52" r="36" fill="#F5A524"/>
+                <text x="326" y="52" text-anchor="middle" class="cover-title" font-size="20" fill="#14213D">PDF</text>
+                <text x="326" y="70" text-anchor="middle" class="cover-body" font-size="10" font-weight="700" fill="#14213D">GUIDE</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-buy">
+          <div class="price-card">
+            <div class="price-row">
+              <span class="price" data-text="price"></span>
+              <span class="currency" data-text="currency"></span>
+            </div>
+            <p class="price-note" data-text="priceNote"></p>
+
+            <div class="buy-zone">
+              <!-- ==========================================================
+                   EDIT: PASTE SHOPIFY BUY BUTTON CODE (TOP OF PAGE) HERE
+                   Paste it on the empty line between the two arrows below.
+                   When code is pasted, the plain "Buy now" button under it
+                   hides itself automatically.
+                   ========================================================== -->
+              <!-- ↓↓↓ paste below ↓↓↓ -->
+
+              <!-- ↑↑↑ paste above ↑↑↑ -->
+              <a class="btn btn-buy btn-block js-buy js-fallback" href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <span data-text="hero.buyLabel"></span>
+              </a>
+            </div>
+            <p class="alt-pay js-paypal-wrap">Prefer PayPal? <a class="js-paypal" href="#">Pay with PayPal</a></p>
+
+            <ul class="trust js-trust"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. THE PROBLEM ==================== -->
+    <section class="section section-white" aria-labelledby="problem-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="problem-title" data-text="problem.heading"></h2>
+          <p data-text="problem.intro"></p>
+        </div>
+        <div class="grid grid-3 js-problems"></div>
+        <p class="solution">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+          <span data-text="problem.solution"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 4. WHAT'S INSIDE ==================== -->
+    <section class="section" id="inside" aria-labelledby="inside-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="inside-title" data-text="inside.heading"></h2>
+          <p data-text="inside.intro"></p>
+        </div>
+        <div class="grid grid-2 grid-3-lg js-topics"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. WHO IT'S FOR ==================== -->
+    <section class="section section-white" aria-labelledby="audience-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="audience-title" data-text="audience.heading"></h2>
+          <p data-text="audience.intro"></p>
+        </div>
+        <ul class="people grid grid-2 js-people"></ul>
+        <p class="note" data-text="audience.note"></p>
+      </div>
+    </section>
+
+    <!-- ==================== 6. HOW YOU GET IT ==================== -->
+    <section class="section" aria-labelledby="delivery-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="delivery-title" data-text="delivery.heading"></h2>
+          <p data-text="delivery.intro"></p>
+        </div>
+        <ol class="steps grid grid-3 js-steps"></ol>
+      </div>
+    </section>
+
+    <!-- ==================== 7. FAQ ==================== -->
+    <section class="section section-white" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <h2 id="faq-title" data-text="faq.heading"></h2>
+        </div>
+        <div class="faq js-faq"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. FINAL CALL TO ACTION ==================== -->
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap">
+        <h2 id="final-title" data-text="finalCta.heading"></h2>
+        <p data-text="finalCta.text"></p>
+        <div class="price-row">
+          <span class="price" data-text="price"></span>
+          <span class="currency" data-text="currency"></span>
+        </div>
+        <div class="buy-zone">
+          <!-- ==========================================================
+               EDIT: PASTE SHOPIFY BUY BUTTON CODE (BOTTOM OF PAGE) HERE
+               Optional. If you leave this empty, the button below uses
+               your shopifyLink from the top of the file.
+               ========================================================== -->
+          <!-- ↓↓↓ paste below ↓↓↓ -->
+
+          <!-- ↑↑↑ paste above ↑↑↑ -->
+          <a class="btn btn-buy btn-block js-buy js-fallback" href="#">
+            <span data-text="finalCta.buyLabel"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="alt-pay js-paypal-wrap">Prefer PayPal? <a class="js-paypal" href="#">Pay with PayPal</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 9. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#top" aria-label="IT'sOnboarding home">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="9" fill="#0F766E"/>
+              <path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="25" cy="7" r="3" fill="#F5A524"/>
+            </svg>
+            <span class="wordmark"><span>IT's</span>Onboarding</span>
+          </a>
+          <p class="footer-tagline" data-text="footer.tagline"></p>
+          <p>Questions? <a class="js-email" href="#"></a></p>
+        </div>
+        <ul class="footer-links">
+          <li><a class="js-terms" href="#">Terms</a></li>
+          <li><a class="js-privacy" href="#">Privacy Policy</a></li>
+          <li><a class="js-refund" href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="js-year"></span> <span data-text="brandName"></span>. All rights reserved.</p>
+        <p data-text="footer.disclaimer"></p>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <p style="padding:16px;text-align:center">Please turn on JavaScript to see this page. Questions? Email us.</p>
+  </noscript>
+
+  <!-- =================================================================
+       PAGE SCRIPT: fills the page with the text from SITE (top of file).
+       You shouldn't need to edit anything below this line.
+       ================================================================= -->
+  <script>
+  (function () {
+    var ICONS = {
+      mail:   '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+      chat:   '<path d="M4 5h16v11H10l-6 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+      cloud:  '<path d="M7 18h10.5a4 4 0 0 0 .4-8A6 6 0 0 0 6.3 9.6 4.2 4.2 0 0 0 7 18z"/>',
+      share:  '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
+      shield: '<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+      alert:  '<path d="M10.3 4 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4M12 17h.01"/>',
+      folder: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+      clock:  '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+      check:  '<path d="m5 12.5 4.5 4.5L19 7.5"/>'
+    };
+
+    function svgIcon(name) {
+      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        (ICONS[name] || ICONS.check) + '</svg>';
+    }
+
+    function get(path) {
+      return path.split('.').reduce(function (obj, key) { return obj == null ? undefined : obj[key]; }, SITE);
+    }
+
+    function el(tag, className, text) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+
+    function setLinks(selector, url) {
+      document.querySelectorAll(selector).forEach(function (a) { a.href = url || '#'; });
+    }
+
+    // Simple text
+    document.querySelectorAll('[data-text]').forEach(function (node) {
+      var value = get(node.dataset.text);
+      if (value != null) node.textContent = value;
+    });
+
+    // Headline with highlighted phrase
+    var h1 = document.querySelector('.js-headline');
+    var headline = SITE.hero.headline;
+    var mark = SITE.hero.headlineHighlight;
+    var at = mark ? headline.indexOf(mark) : -1;
+    if (at > -1) {
+      h1.append(headline.slice(0, at), el('span', 'highlight', mark), headline.slice(at + mark.length));
+    } else {
+      h1.textContent = headline;
+    }
+
+    // Product cover words
+    document.getElementById('cover-alt').textContent = 'Cover of ' + SITE.productName;
+    document.querySelector('.js-cover-kicker').textContent = SITE.cover.kicker;
+    document.querySelector('.js-cover-tagline').textContent = SITE.cover.tagline;
+    var titleNode = document.querySelector('.js-cover-title');
+    SITE.cover.titleLines.forEach(function (line, i, all) {
+      var t = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+      t.setAttribute('x', '50');
+      t.setAttribute('y', String(168 + i * 42));
+      if (i === all.length - 1) t.setAttribute('fill', '#F5A524');
+      t.textContent = line;
+      titleNode.appendChild(t);
+    });
+
+    // Buy links (Shopify + PayPal)
+    setLinks('.js-buy', SITE.shopifyLink);
+    if (SITE.paypalLink) {
+      setLinks('.js-paypal', SITE.paypalLink);
+    } else {
+      document.querySelectorAll('.js-paypal-wrap').forEach(function (p) { p.classList.add('is-hidden'); });
+    }
+
+    // If Shopify embed code was pasted into a buy zone, hide the plain button there
+    document.querySelectorAll('.buy-zone').forEach(function (zone) {
+      var pasted = Array.prototype.some.call(zone.children, function (child) {
+        return !child.classList.contains('js-fallback');
+      });
+      if (pasted) zone.querySelector('.js-fallback').classList.add('is-hidden');
+    });
+
+    // Trust list
+    var trust = document.querySelector('.js-trust');
+    SITE.hero.trust.forEach(function (item) {
+      var li = el('li');
+      li.innerHTML = svgIcon('check');
+      li.append(item);
+      trust.appendChild(li);
+    });
+
+    // Cards (problem + topics)
+    function renderCards(target, items, badgeClass) {
+      var box = document.querySelector(target);
+      items.forEach(function (item) {
+        var card = el('article', 'card');
+        var badge = el('div', 'icon-badge' + (badgeClass ? ' ' + badgeClass : ''));
+        badge.innerHTML = svgIcon(item.icon);
+        card.append(badge, el('h3', null, item.title), el('p', null, item.text));
+        box.appendChild(card);
+      });
+    }
+    renderCards('.js-problems', SITE.problem.points, 'is-problem');
+    renderCards('.js-topics', SITE.inside.topics);
+
+    // Who it's for
+    var people = document.querySelector('.js-people');
+    SITE.audience.people.forEach(function (p) {
+      var li = el('li');
+      var tick = el('span', 'tick');
+      tick.innerHTML = svgIcon('check');
+      var body = el('div');
+      body.append(el('h3', null, p.title), el('p', null, p.text));
+      li.append(tick, body);
+      people.appendChild(li);
+    });
+
+    // Steps
+    var steps = document.querySelector('.js-steps');
+    SITE.delivery.steps.forEach(function (s) {
+      var li = el('li');
+      var card = el('div', 'card');
+      card.append(el('h3', null, s.title), el('p', null, s.text));
+      li.appendChild(card);
+      steps.appendChild(li);
+    });
+
+    // FAQ
+    var faq = document.querySelector('.js-faq');
+    SITE.faq.items.forEach(function (item) {
+      var d = el('details');
+      d.append(el('summary', null, item.q), el('p', null, item.a));
+      faq.appendChild(d);
+    });
+
+    // Footer
+    var email = document.querySelector('.js-email');
+    email.href = 'mailto:' + SITE.contactEmail;
+    email.textContent = SITE.contactEmail;
+    setLinks('.js-terms', SITE.footer.termsLink);
+    setLinks('.js-privacy', SITE.footer.privacyLink);
+    setLinks('.js-refund', SITE.footer.refundLink);
+    document.querySelector('.js-year').textContent = new Date().getFullYear();
+  })();
+  </script>
+</body>
+</html>
